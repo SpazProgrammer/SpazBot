@@ -1,0 +1,15 @@
+{
+  "name": "SpazBot",
+  "version": "0.0.1",
+  "description": "Bot of moderation",
+  "main": "index.js",
+  "repository": "https://github.com/SpazProgrammer/SpazBot.git",
+  "author": "Space3319#1639",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "discord.js": "^12.5.3"
+  }
+}
