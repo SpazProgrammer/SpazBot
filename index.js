@@ -8,7 +8,7 @@ bot.on('ready', async () =>{
 });
 
 bot.on('message', async () =>{
-    if (msg.content == 'hi') {
+    if (msg.content == 'hello') {
         msg.channel.send('hello')
     }
 });
