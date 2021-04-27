@@ -29,4 +29,4 @@ client.on('message', message => {
 });
 
 // Log our bot in using the token from https://discord.com/developers/applications
-client.login(token);
+client.login(config.token);
