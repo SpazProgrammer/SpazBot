@@ -1,5 +1,5 @@
 {
-  "name": "SpazBot",
+  "name": "spazbot",
   "version": "0.0.4",
   "description": "Bot of moderation",
   "main": "index.js",

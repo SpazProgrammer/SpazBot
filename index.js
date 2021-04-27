@@ -7,7 +7,7 @@
 // Import the discord.js module
 const Discord = require('discord.js');
 const config = require('./config.js');
-
+const cmd = require('test.js')
 // Create an instance of a Discord client
 const client = new Discord.Client();
 
@@ -25,19 +25,14 @@ client.on('message', message => {
   // If the message is "ping"
   if (message.content === 'ping') {
     // Send "pong" to the same channel
-    message.channel.send('pong');
+    message.channel.send('pong');  
+  }
+
+  if (message.content === config.prefix && 'test') {
+      message.channel.send('test')
   }
 });
 
-client.on('message', message =>{
-    if (message.content.startsWith(config.prefix) && !message.author.bot) {
-        cmdArray = message.content.substring(1).split()
-        cmd = cmdArray[0]
-        args = cmd.slice(1)
-
-        message.channel.send(cmd)
-    }
-})
 
 // Log our bot in using the token from https://discord.com/developers/applications
 client.login(config.token);
