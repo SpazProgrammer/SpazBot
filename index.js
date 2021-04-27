@@ -28,7 +28,7 @@ client.on('message', message => {
   }
 
   if (message.content.startsWith(config.prefix) === 'test') {
-      message.channel.send('test')
+      message.channel.send('test');
   }
 });
 
