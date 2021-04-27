@@ -1,8 +1,8 @@
 const Discord = require('discord.js');
 const client = new Discord.Client({
 	fetchAllMembers: true
-}),
-const config = require('./config.js'),
+});
+const config = require('./config.js');
 fs = require('fs')
 
 client.login(config.token)
