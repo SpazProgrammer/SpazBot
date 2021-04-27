@@ -31,11 +31,11 @@ client.on('message', message => {
 
 client.on('message', message =>{
     if (message.content.startsWith(config.prefix) && !message.author.bot) {
-        cmdArray = msg.content.substring(1).split()
+        cmdArray = message.content.substring(1).split()
         cmd = cmdArray[0]
         args = cmd.slice(1)
 
-        msg.channel.send(cmd)
+        message.channel.send(cmd)
     }
 })
 
