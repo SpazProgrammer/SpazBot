@@ -1,9 +1,9 @@
 const Discord = require('discord.js'),
-	const client = new Discord.Client({
-		fetchAllMembers: true
-	}),
-  	const config = require('./config.js'),
-  	fs = require('fs')
+const client = new Discord.Client({
+	fetchAllMembers: true
+}),
+const config = require('./config.js'),
+fs = require('fs')
 
 client.login(config.token)
 client.commands = new Discord.Collection()
