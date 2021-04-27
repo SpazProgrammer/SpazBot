@@ -30,6 +30,14 @@ client.on('message', message => {
   if (message.content === 'S!test') {
       message.channel.send('test');
   }
+
+  if (message.content.startWith(config.prefix) && !message.author.bot) {
+    var cmdArray = message.content.substring(1).split()
+    var cmd = cmdArray[0]
+    var args = cmd.slice(1)
+
+    message.channel.send(cmd)
+}
 });
 
 client.on('message', message => {
