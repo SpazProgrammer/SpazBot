@@ -6,6 +6,7 @@
 
 // Import the discord.js module
 const Discord = require('discord.js');
+const config = require('./config.js');
 
 // Create an instance of a Discord client
 const client = new Discord.Client();
@@ -28,4 +29,4 @@ client.on('message', message => {
 });
 
 // Log our bot in using the token from https://discord.com/developers/applications
-client.login('your token here');
+client.login(token);
