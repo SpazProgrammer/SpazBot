@@ -1,20 +1,31 @@
+'use strict';
+
+/**
+ * A ping pong bot, whenever you send "ping", it replies "pong".
+ */
+
+// Import the discord.js module
 const Discord = require('discord.js');
-const config = require('./config.js');
-const bot = new Discord.Client ({DisableEveryone: true});
 
-bot.on('ready', async () =>{
-    console.log('SpazBot ready.')
-    bot.user.setActivity('Version : 0.0.3');
+// Create an instance of a Discord client
+const client = new Discord.Client();
+
+/**
+ * The ready event is vital, it means that only _after_ this will your bot start reacting to information
+ * received from Discord
+ */
+client.on('ready', () => {
+  console.log('I am ready!');
 });
 
-bot.on('message', async () =>{
-    if (msg.content.startWith(config.prefix) && !msg.author.bot) {
-        cmdArray = msg.content.substring(1).split()
-        cmd = cmdArray[0]
-        args = cmd.slice(1)
-
-        msg.channel.send(cmd)
-    }
+// Create an event listener for messages
+client.on('message', message => {
+  // If the message is "ping"
+  if (message.content === 'ping') {
+    // Send "pong" to the same channel
+    message.channel.send('pong');
+  }
 });
 
-bot.login(process.env.TOKEN);
+// Log our bot in using the token from https://discord.com/developers/applications
+client.login('your token here');
