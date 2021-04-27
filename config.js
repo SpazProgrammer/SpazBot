@@ -1,4 +1,4 @@
-const config ={
+const config = {
     prefix: 'S!',
     token: process.env.TOKEN
 };
