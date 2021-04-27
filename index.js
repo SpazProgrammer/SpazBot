@@ -17,6 +17,7 @@ const client = new Discord.Client();
  */
 client.on('ready', () => {
   console.log('I am ready!');
+  client.user.setActivity('Version : 0.0.4')
 });
 
 // Create an event listener for messages
@@ -27,6 +28,16 @@ client.on('message', message => {
     message.channel.send('pong');
   }
 });
+
+client.on('message', message =>{
+    if (message.content.startsWith(config.prefix) && !message.author.bot) {
+        cmdArray = msg.content.substring(1).split()
+        cmd = cmdArray[0]
+        args = cmd.slice(1)
+
+        msg.channel.send(cmd)
+    }
+})
 
 // Log our bot in using the token from https://discord.com/developers/applications
 client.login(config.token);

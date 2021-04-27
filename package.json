@@ -1,6 +1,6 @@
 {
   "name": "SpazBot",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Bot of moderation",
   "main": "index.js",
   "repository": "https://github.com/SpazProgrammer/SpazBot.git",
