@@ -27,7 +27,7 @@ client.on('message', message => {
     message.channel.send('pong');  
   }
 
-  if (message.content.startsWith(config.prefix) === 'test') {
+  if (message.content === 'S!test') {
       message.channel.send('test');
   }
 });
