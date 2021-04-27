@@ -19,7 +19,6 @@ fs.readdir('./commands', (err, files) => {
 
 client.on('ready', () => {
 	console.log('SpazBot ready')
-	client.setActivity('Version : 0.0.1')
 })
 
 client.on('message', message => {
